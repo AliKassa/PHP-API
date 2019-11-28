@@ -20,7 +20,7 @@ $currency = 'RUB';
 $desc = 'Test';
 
 $ip = $_SERVER['REMOTE_ADDR'];
-$userAgent = $_SERVER['USER_AGENT'];
+$userAgent = $_SERVER['HTTP_USER_AGENT'];
 
 $response = $this->aliKassa->deposit(
 $orderId, $amount, $paySystem, $currency, $desc, $ip, $userAgent,
