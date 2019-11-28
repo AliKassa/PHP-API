@@ -176,6 +176,11 @@ class AliKassa
     {
         $url = $this->url . '/' . $this->version . '/' . $method;
 
+        // normalization data
+        $data = array_map(function($value) {
+            return is_null($value) ? '' : $value;
+        }, $data);
+
         $ch = curl_init();
 
         if ($httpMethod==='post') {
