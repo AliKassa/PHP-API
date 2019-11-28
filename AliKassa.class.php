@@ -12,7 +12,7 @@ class AliKassa
     private $secret;
     private $algo;
 
-    public function __construct($uuid, $secret, $algo='md5')
+    public function __construct($uuid, $secret, $algo='sha256')
     {
         $this->uuid = $uuid;
         $this->secret = $secret;
